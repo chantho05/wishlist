@@ -1,0 +1,30 @@
+<html>
+    <title></title>
+    <head></head>
+    <body>
+       <h1>Hello, {{current_user.name}} </h1>
+       <table>
+        <tr>
+            <th>Item</th>
+            <th>Added By</th>
+            <th>Date Added</th> 
+            <th>Action</th>
+        </tr>
+        {% for item in user_items %}
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.added_by.name}}</td>
+                    <td>{{item.date_added}}</td>
+                </tr>
+        {% endfor %}
+        {% item in other_items%}
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.added_by.name}}</td>
+                <td>{{item.date_added}}</td>
+                <td><a hfer = '/main/add'>Add to wish list</a></td>
+            </tr>
+        {%endfor%}
+    </table>
+    </body>
+</html>

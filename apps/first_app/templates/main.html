@@ -1,0 +1,24 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if form.errors %}
+            {% for error in form.errors %}
+                <p>{{error}}</p>
+            {% endfor %}
+        {% endif %}
+        <h1>Signin</h1>
+        <form action='submit_signin' method='post'>
+            {% csrf_token %}
+            {{ signin_form }}
+            <input type='submit' value='Sign In' />
+        </form>
+
+        <h1>Register</h1>
+        <form action='submit_register' method='post'>
+            {% csrf_token %}
+            {{ registration_form }}
+            <input type='submit' value='Register' />
+        </form>
+
+        

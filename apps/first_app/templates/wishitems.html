@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+          
+        <h3><a href="dashboard">Home</a></h3>
+        <h1><a href="/">Logout</a></h1>
+        <br>
+        <br>
+        {% for items in user.items%}
+            <p> {{ item.name }} </p>
+
+        <h3>Users who added this product/item under their wish list</h3>
+
+        {% for i in users %}
+        <ul>
+           <li> {{current_user.name}} <li>
+        </ul>
+        {% endfor %}
+
+    </body>
+</html>
